@@ -1,0 +1,21 @@
+h1{
+    background-color:thistle;
+}
+
+td{
+    border: 1px black solid;
+}
+
+table{
+    background-color: tomato;
+    border: 2px chartreuse solid;  
+}
+
+.button{
+    background-color:cornflowerblue;
+    border-radius: 15px;
+}
+.numero{
+    display: block;
+
+}

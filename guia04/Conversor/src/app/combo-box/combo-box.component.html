@@ -1,0 +1,17 @@
+<div class="header">
+  <h1>Conversion de Longitud</h1>
+  <p>Ingrese los datos solicitados para realizar la conversion</p>
+</div>
+
+<label for="">Valor:</label>
+<input type="text" [(ngModel)]="valorcm" />
+<label>Longitud:</label>
+<select [(ngModel)]="opcionSeleccionada" (change)="capturar()">
+  
+  <option *ngFor="let unidad of unidades" value="{{ unidad }}">
+    {{ unidad }}
+  </option>
+</select>
+<label [hidden]="opcionSeleccionada == ''"
+  >Su valor en {{ opcionSeleccionada }} es: {{ valorConversion }}</label
+>

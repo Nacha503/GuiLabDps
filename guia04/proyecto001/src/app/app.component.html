@@ -1,0 +1,36 @@
+<h1 style="text-align: center">Bienvendio a {{ title }}</h1>
+<div>
+  <p>Nombre del empleado: {{ nombre }}</p>
+  <p>
+    Los ultimos tres sueldos son: {{ sueldos[0] }},{{ sueldos[1] }},{{
+      sueldos[2]
+    }}
+  </p>
+  <p>Edad: {{ edad }}</p>
+  <p *ngIf="edad >= 18; else otroCaso">Es mayor de edad</p>
+  <table>
+    <tr>
+      <td>suledos</td>
+    </tr>
+    <tr *ngFor="let sueldo of sueldos">
+      <td>{{ sueldo }}</td>
+    </tr>
+  </table>
+
+  <p>En los ultimos 3 meses has ganado: {{ ultimos3Sueldos() }}</p>
+  <p>{{ esActivo() }}</p>
+  <a href="{{ sitio }}">google</a>
+</div>
+
+<div>
+  <p>{{contador}}</p>
+  <button class="button" (click)="incrementar()">Sumar 1</button>
+  <button class="button" (click)="decrementar()">Restar 1</button>
+</div>
+
+<!--templates-->
+<!--hay que hacer templates para usarlos con el else-->
+
+<ng-template #otroCaso>
+  <div>Please friend, login.</div>
+</ng-template>

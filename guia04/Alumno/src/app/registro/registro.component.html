@@ -1,0 +1,28 @@
+<div class="header">
+  <h1>Datos del alumno</h1>
+  <p>Ingrese los datos del alumno</p>
+</div>
+
+<label for="">Nombre:</label>
+<input type="text" [(ngModel)]="cliente.nombre" />
+<label for="">Edad:</label>
+<input type="text" [(ngModel)]="cliente.edad" />
+<button class="button" (click)="ingresar()">Ingresar</button>
+<hr />
+
+<table class="form_caja" [hidden]="contador == 0">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Edad</th>
+      <th>Mayor de Edad</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let talumno of registro">
+      <td>{{ talumno.nombre }}</td>
+      <td>{{ talumno.edad }}</td>
+      <td>{{ talumno.mayor }}</td>
+    </tr>
+  </tbody>
+</table>
